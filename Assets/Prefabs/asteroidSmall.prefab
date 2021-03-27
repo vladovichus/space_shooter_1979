@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5380410341136642829}
   - component: {fileID: 750569867313338640}
   - component: {fileID: 4800436116565758387}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: asteroidSmall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -156,7 +156,7 @@ MonoBehaviour:
   screenBottom: -6
   screenLeft: -10
   screenRight: 10
-  asteroidSize: 0
+  asteroidSize: 1
   asteroidMedium: {fileID: 8182011261200445038, guid: 0b06ffe362176074e9601ea4686a5cf3,
     type: 3}
   asteroidSmall: {fileID: 5059675275406397795}

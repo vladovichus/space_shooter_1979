@@ -26,8 +26,7 @@ public class AsteroidScript : MonoBehaviour
 
         rb.AddForce(thrust);
         rb.AddTorque(torque);
-
-        asteroidSize = 3; //big size
+        
     }
 
     // Update is called once per frame
@@ -66,21 +65,22 @@ public class AsteroidScript : MonoBehaviour
 
             if (asteroidSize == 3)
             {
-                GameObject asteroid1 = Instantiate(asteroidMedium, transform.position, transform.rotation);
-                GameObject asteroid2 = Instantiate(asteroidMedium, transform.position, transform.rotation);
-                asteroid1.GetComponent<AsteroidScript>().asteroidSize = 2;
-                asteroid2.GetComponent<AsteroidScript>().asteroidSize = 2;
+                Instantiate(asteroidMedium, transform.position, transform.rotation);
+                Instantiate(asteroidMedium, transform.position, transform.rotation);
                 
-                Destroy(gameObject);
             }
 
             else if (asteroidSize == 2)
             {
+                Instantiate(asteroidSmall, transform.position, transform.rotation);
+                Instantiate(asteroidSmall, transform.position, transform.rotation);
             }
 
             else if (asteroidSize == 1)
             {
+                
             }
+            Destroy(gameObject);
         }
     }
 }
