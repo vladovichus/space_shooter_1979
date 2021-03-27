@@ -16,7 +16,10 @@ TextureImporter:
     second: asteroid_big
   - first:
       213: -96796154962138083
-    second: asteroid_small
+    second: asteroid_medium
+  - first:
+      213: -7054820123952135176
+    second: asteroid_medium
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -198,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: asteroid_small
+      name: asteroid_medium
       rect:
         serializedVersion: 2
         x: 282
@@ -206,7 +209,7 @@ TextureImporter:
         width: 46
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -214,6 +217,27 @@ TextureImporter:
       bones: []
       spriteID: d1cabdfe86c18aef0800000000000000
       internalID: -96796154962138083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: asteroid_small
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 192
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f34e8da97e381e90800000000000000
+      internalID: -7054820123952135176
       vertices: []
       indices: 
       edges: []

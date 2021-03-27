@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Experimental;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class AsteroidScript : MonoBehaviour
 {
@@ -12,7 +14,9 @@ public class AsteroidScript : MonoBehaviour
     public float screenBottom;
     public float screenLeft;
     public float screenRight;
-
+    public int asteroidSize; // 3- big, 2-medium, 1 = small
+    public GameObject asteroidMedium;
+    public GameObject asteroidSmall;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +26,8 @@ public class AsteroidScript : MonoBehaviour
 
         rb.AddForce(thrust);
         rb.AddTorque(torque);
+
+        asteroidSize = 3; //big size
     }
 
     // Update is called once per frame
@@ -50,5 +56,31 @@ public class AsteroidScript : MonoBehaviour
         }
 
         transform.position = newPos;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Bullet"))
+        {
+            Destroy(other.gameObject);
+
+            if (asteroidSize == 3)
+            {
+                GameObject asteroid1 = Instantiate(asteroidMedium, transform.position, transform.rotation);
+                GameObject asteroid2 = Instantiate(asteroidMedium, transform.position, transform.rotation);
+                asteroid1.GetComponent<AsteroidScript>().asteroidSize = 2;
+                asteroid2.GetComponent<AsteroidScript>().asteroidSize = 2;
+                
+                Destroy(gameObject);
+            }
+
+            else if (asteroidSize == 2)
+            {
+            }
+
+            else if (asteroidSize == 1)
+            {
+            }
+        }
     }
 }
